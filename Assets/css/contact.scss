@@ -1,0 +1,128 @@
+.contact {
+    position: relative;
+    top: 50px;
+    padding-bottom: 100px;
+    .contact-header {
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        &::after {
+            content: url("/Assets/img/shape.png");
+            position: absolute;
+            top: 38px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        p {
+            text-transform: uppercase;
+            font-size: 2em;
+            &::before {
+                content: "";
+                border-bottom: 2px solid #00aaef;
+                width: 65px;
+                height: 10px;
+                position: absolute;
+                bottom: -5px;
+            }
+            &::after {
+                content: "";
+                border-bottom: 2px solid #00aaef;
+                position: absolute;
+                bottom: -5px;
+                width: 65px;
+                height: 10px;
+                right: 0px;
+            }
+        }
+    }
+    .contact-content {
+        overflow-x: hidden;
+        position: relative;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 60px;
+        @media (min-width: 1000px) {
+            flex-direction: row;
+            justify-content: center;
+        }
+        .information {
+            width: 200px;
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            p {
+                width: 140px;
+                padding-bottom: 35px;
+                span {
+                    display: block;
+                    width: 320px;
+                    text-align: left;
+                }
+            }
+        }
+        .form {
+            margin-left: auto;
+            margin-right: auto;
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 60vw;
+                margin-left: auto;
+                margin-right: auto;
+                @media (orientation: portrait) {
+                    width: 80vw;
+                }
+                @media (min-width: 1000px) {
+                    width: 30vw;
+                }
+                input[type=text] {
+                    height: 50px;
+                    margin-bottom: 10px;
+                    padding: 5px;
+                    outline-color: #00aaef;
+                    border: none;
+                    background-color: #eee;
+                    &::placeholder {
+                        color: #000;
+                        text-align: center;
+                        font-weight: 600;
+                        font-size: 1em;
+                        text-transform: uppercase;
+                    }
+                }
+                textarea {
+                    margin-bottom: 10px;
+                    background-color: #eee;
+                    padding: 5px;
+                    outline-color: #00aaef;
+                    border: none;
+                    resize: none;
+                    &::placeholder {
+                        padding-top: 10px;
+                        text-transform: uppercase;
+                        text-align: center;
+                        color: #000;
+                        font-weight: 600;
+                        font-size: 1em;
+                    }
+                }
+                input[type=submit] {
+                    height: 50px;
+                    background-color: #00aaef;
+                    border: none;
+                    color: white;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    &:hover {
+                        cursor: pointer;
+                        background-color: #1193c6;
+                    }
+                }
+            }
+        }
+    }
+}

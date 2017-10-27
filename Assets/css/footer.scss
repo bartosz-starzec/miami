@@ -1,0 +1,42 @@
+footer {
+    position: relative;
+    top: 50px;
+    @media (orientation: portrait) {
+        height: 30vh;
+    }
+    height: 60vh;
+    .bg {
+        overflow-x: hidden;
+        display: block;
+        background-image: url("/Assets/img/footer.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        position: relative;
+        .footer-logo {
+            overflow-x: hidden;
+            background-image: url("/Assets/img/logo-footer.png");
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            margin: -75px -75px 0 0;
+        }
+        .copy {
+            overflow-x: hidden;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 15px;
+            @media(min-width: 500px) {
+                bottom: 60px;
+            }
+            p {
+                color: white;
+                text-align: center;
+            }
+        }
+    }
+}

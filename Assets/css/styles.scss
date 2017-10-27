@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    @import "header";
+    @import "aboutUs";
+    @import "gallery";
+    @import "consultation";
+    @import "testimonials";
+    @import "contact";
+    @import "footer";
+}

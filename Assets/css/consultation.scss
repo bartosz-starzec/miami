@@ -1,0 +1,137 @@
+.consultation {
+    position: relative;
+    top: 50px;
+    padding-bottom: 160px;
+    .consultation-header {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -25px;
+        letter-spacing: 1px;
+        &::after {
+            content: url("/Assets/img/shape.png");
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 38px;
+        }
+        p {
+            color: #000;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 2em;
+            &::before {
+                content: "";
+                border-bottom: 2px solid #00aaef;
+                position: absolute;
+                bottom: -5px;
+                left: 2px;
+                width: 115px;
+                height: 10px;
+            }
+            &::after {
+                content: "";
+                border-bottom: 2px solid #00aaef;
+                position: absolute;
+                bottom: -5px;
+                right: 2px;
+                width: 115px;
+                height: 10px;
+            }
+        }
+    }
+    .container {
+        position: relative;
+        top: 90px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 1000px) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .content {
+            margin-top: 25px;
+            margin-bottom: 35px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 95vw;
+            @media (min-width: 1000px) {
+                width: 40vw;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+            }
+            h1 {
+                color: #000;
+                font-size: 1.8em;
+                margin-bottom: 15px;
+                span {
+                    display: block;
+                }
+            }
+            p {
+                color: #000;
+                font-size: 1em;
+            }
+        }
+        .forms {
+            margin-left: auto;
+            margin-right: auto;
+            form {
+                text-align: center;
+                input[type=text] {
+                    display: flex;
+                    flex-direction: column;
+                    width: 60vw;
+                    height: 40px;
+                    padding: 5px;
+                    outline-color: #00aaef;
+                    background-color: #eee;
+                    border: none;
+                    margin-bottom: 7px;
+                    font-weight: 600;
+                    margin-left: auto;
+                    margin-right: auto;
+                    @media (orientation: portrait) {
+                        width: 80vw;
+                    }
+                    @media (min-width: 1000px) {
+                        width: 30vw;
+                        height: 45px;
+                        margin-bottom: 9px;
+                    }
+                    &::placeholder {
+                        color: #000;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+                }
+                input[type=submit] {
+                    width: 60vw;
+                    height: 40px;
+                    border: none;
+                    color: #fff;
+                    font-weight: 600;
+                    text-align: center;
+                    text-transform: uppercase;
+                    background-color: #00aaef;
+                    @media (orientation: portrait) {
+                        width: 80vw;
+                    }
+                    @media (min-width: 1000px) {
+                        width: 30vw;
+                        height: 45px;
+                    }
+                    &:hover {
+                        background-color: #1193c6;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

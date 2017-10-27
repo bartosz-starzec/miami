@@ -1,0 +1,101 @@
+header {
+    background-color: #06071b;
+    height: 100vh;
+    background-image: url("/Assets/img/0d7ce4eab8a0e896200246897c5e86e3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    @media (orientation: portrait) {
+        height: 50vh;
+    }
+    .logo {
+        background-image: url("/Assets/img/logo.png");
+        background-repeat: no-repeat;
+        width: 170px;
+        height: 110px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0%;
+        @media (min-width: 800px) {
+            top: 5%;
+        }
+    }
+    hgroup {
+        display: none;
+        @media (min-width: 800px) {
+            display: block;
+        }
+        .number {
+            position: absolute;
+            top: 12%;
+            left: 13%;
+            p {
+                color: #a9aab4;
+                font-size: 1.1em;
+            }
+        }
+        .call {
+            position: absolute;
+            top: 12%;
+            right: 13%;
+            p {
+                color: #a9aab4;
+                font-size: 1.1em;
+                border-bottom: 1px dashed rgb(95, 99, 130);
+                text-transform: uppercase;
+            }
+        }
+        nav {
+            display: none;
+            @media (min-width: 1120px) {
+                display: block;
+                position: absolute;
+                bottom: 12%;
+                left: 13%;
+                width: 950px;
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    li {
+                        display: inline-block;
+                        font-size: 20px;
+                        //                    padding-right: 90px;
+                        text-transform: uppercase;
+                        a {
+                            text-decoration: none;
+                            color: white;
+                            &:hover {
+                                color: #898a95;
+                            }
+                        }
+                    }
+                }
+            }
+            @media (min-width: 1300px) {
+                width: 1100px;
+            }
+        }
+    }
+    .hamburger1 {
+        position: absolute;
+        top: 11%;
+        left: 5%;
+        i {
+            color: #fff;
+            font-size: 35px;
+            &:hover {
+                color: #898a95;
+                cursor: pointer;
+            }
+        }
+        @media (min-width: 1120px) {
+            display: none;
+        }
+        @media (max-width: 800px) and (min-width: 750px) {
+            top: 7%;
+        }
+    }
+    @import "sidebar";
+}
